@@ -5,7 +5,7 @@ LABEL telegram="https://t.me/uPagge"
 
 ADD buildAgent.properties TeamCity/buildAgent/conf/
 
-RUN apt-get install -y git curl
+RUN apt-get install -y git curl zlib1g liblttng-ust0
 
 EXPOSE 8111 9090
 ENTRYPOINT TeamCity/buildAgent/bin/agent.sh run
