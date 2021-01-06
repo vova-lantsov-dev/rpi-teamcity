@@ -17,7 +17,7 @@ services:
     networks:
       - teamcity_network
     depends_on: 
-      - base-image
+      - rpi4-base-image
 
   server:
     build: server
