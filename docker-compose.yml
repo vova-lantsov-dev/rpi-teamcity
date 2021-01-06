@@ -1,6 +1,14 @@
 version: '3.7'
 
 services:
+  rpi4-base-image:
+    build: balenalib-aarch64-debian-bullseye-dotnet-5.0-sdk-run
+    container_name: rpi4-base-image
+    restart: "no"
+    command: "true"
+    networks: 
+      - teamcity_network
+
   jdk11:
     build: jdk11
     container_name: jdk11
@@ -8,6 +16,8 @@ services:
     restart: "no"
     networks:
       - teamcity_network
+    depends_on: 
+      - base-image
 
   server:
     build: server
