@@ -36,6 +36,8 @@ services:
     build: agent-alice
     restart: always
     container_name: teamcity_agent
+    volumes: 
+      - /var/run/docker.sock:/var/run/docker.sock
     depends_on:
       - server
     networks:
