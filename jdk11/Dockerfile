@@ -1,4 +1,4 @@
-FROM schachr/raspbian-stretch
+FROM rpi-teamcity_rpi4-base-image
 LABEL maintainer="Vova Lantsov"
 LABEL contact_email="contact@vova-lantsov.dev"
 LABEL telegram="https://t.me/vova_lantsov"
