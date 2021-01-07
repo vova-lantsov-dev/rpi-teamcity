@@ -1,7 +1,7 @@
-# Taken from https://github.com/balena-io-library/base-images/blob/master/balena-base-images/dotnet/aarch64/debian/buster/5.0-sdk/run/Dockerfile
+# Taken from https://github.com/balena-io-library/base-images/blob/master/balena-base-images/dotnet/aarch64/debian/bullseye/5.0-sdk/run/Dockerfile
 # Because there is no corresponding image in the Docker Hub
 
-FROM balenalib/aarch64-debian:buster-run
+FROM balenalib/aarch64-debian:bullseye-run
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -12,7 +12,7 @@ RUN apt-get update \
         libc6 \
         libgcc1 \
         libgssapi-krb5-2 \
-        libicu63 \
+        libicu67 \
         libssl1.1 \
         libstdc++6 \
         zlib1g \
@@ -51,7 +51,7 @@ CMD ["echo","'No CMD command was set in Dockerfile! Details about CMD command co
   && bash test-stack@dotnet.sh \
   && rm -rf test-stack@dotnet.sh 
 
-RUN [ ! -d /.balena/messages ] && mkdir -p /.balena/messages; echo 'Here are a few details about this Docker image (For more information please visit https://www.balena.io/docs/reference/base-images/base-images/): \nArchitecture: ARM v8 \nOS: Debian Buster \nVariant: run variant \nDefault variable(s): UDEV=off \nThe following software stack is preinstalled: \ndotnet 5.0-sdk \nExtra features: \n- Easy way to install packages with `install_packages <package-name>` command \n- Run anywhere with cross-build feature  (for ARM only) \n- Keep the container idling with `balena-idle` command \n- Show base image details with `balena-info` command' > /.balena/messages/image-info
+RUN [ ! -d /.balena/messages ] && mkdir -p /.balena/messages; echo 'Here are a few details about this Docker image (For more information please visit https://www.balena.io/docs/reference/base-images/base-images/): \nArchitecture: ARM v8 \nOS: Debian Bullseye \nVariant: run variant \nDefault variable(s): UDEV=off \nThe following software stack is preinstalled: \ndotnet 5.0-sdk \nExtra features: \n- Easy way to install packages with `install_packages <package-name>` command \n- Run anywhere with cross-build feature  (for ARM only) \n- Keep the container idling with `balena-idle` command \n- Show base image details with `balena-info` command' > /.balena/messages/image-info
 
 RUN echo '#!/bin/sh.real\nbalena-info\nrm -f /bin/sh\ncp /bin/sh.real /bin/sh\n/bin/sh "$@"' > /bin/sh-shim \
 	&& chmod +x /bin/sh-shim \
