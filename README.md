@@ -42,3 +42,8 @@ that you need to do in the web UI, especially authorizing the build agent.
 
 #### Other versions of Docker or docker-compose
 I can't guarantee that this project will work for other versions of Docker or docker-compose.
+
+### What does TeamCity support out of the box?
+- .NET 5 SDK
+- `docker command`
+- `docker-compose` command
