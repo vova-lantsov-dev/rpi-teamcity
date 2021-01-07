@@ -18,7 +18,8 @@ RUN apt-get install docker-ce=5:19.03.14~3-0~debian-buster docker-ce-cli=5:19.03
 
 RUN apt-get upgrade -y
 
-RUN curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+RUN curl -L "https://github.com/linuxserver/docker-docker-compose/releases/download/1.27.4-ls25/docker-compose-arm64" -o /usr/bin/docker-compose
+RUN chmod +x /usr/bin/docker-compose
 
 EXPOSE 8111 9090
 ENTRYPOINT TeamCity/buildAgent/bin/agent.sh run
