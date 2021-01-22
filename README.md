@@ -45,7 +45,7 @@ I can't guarantee that this project will work for other versions of Docker or do
 
 ### What is supported by TeamCity agent?
 | Tool Name | Tool Version | Description | End of support |
-| --------- | ------------ | ----------- |
+| --------- | ------------ | ----------- | -------------- |
 | .NET Core 2.1 SDK | v2.1.24 (SDK 2.1.812) | Long-term support release.<br>**Included runtimes:**<br>.NET Core Runtime 2.1.24<br>ASP.NET Core Runtime 2.1.24 | 2021-08-21 |
 | .NET Core 3.1 SDK | v3.1.11 (SDK 3.1.405) | Long-term support release.<br>**Included runtimes:**<br>.NET Core Runtime 3.1.11<br>ASP.NET Core Runtime 3.1.11 | 2022-12-03 |
 | .NET 5 SDK | v5.0.2 (SDK 5.0.102) | **Included runtimes:**<br>.NET Runtime 5.0.2<br>ASP.NET Core Runtime 5.0.2 | N/A |
