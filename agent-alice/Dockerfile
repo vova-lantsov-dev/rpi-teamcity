@@ -1,7 +1,7 @@
 FROM rpi-teamcity_server
-LABEL maintainer="uPagge"
-LABEL contact_email="upagge@mail.ru"
-LABEL telegram="https://t.me/uPagge"
+LABEL maintainer="Vova Lantsov"
+LABEL contact_email="contact@vova-lantsov.dev"
+LABEL telegram="https://t.me/vova_lantsov"
 
 ADD buildAgent.properties TeamCity/buildAgent/conf/
 

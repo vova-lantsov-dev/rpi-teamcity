@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   rpi4-base-image:
-    build: balenalib-aarch64-debian-bullseye-dotnet-5.0-sdk-run
+    build: debian-bullseye-dotnet-sdk
     container_name: rpi4-base-image
     restart: "no"
     command: "true"
