@@ -29,7 +29,7 @@ ENV ASPNETCORE_URLS=http://+:80 \
 # Install .NET Core 2.1 SDK
 ENV DOTNET_2_1_SDK_VERSION 2.1.813
 RUN curl -SL --output dotnet.tar.gz "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_2_1_SDK_VERSION/dotnet-sdk-$DOTNET_2_1_SDK_VERSION-linux-arm64.tar.gz" \
-    && dotnet_sha512='e11d5d407008087d90e21ad593fcfc7b2edf7e92221bffeb44597725b88724fd301ff351a52dfeede49b229cd871b719f60d0d0f72c27f1ed895fc4a0fae051b' \
+    && dotnet_sha512='8b953577e293ea61e764e9a54cdf7e94f0d33fccde699c339dbf298ff7bb3265858f96ea7922df2fa49aeed7572b24ef92e8d0f98b394b9b592f6d3fe8555ad5' \
     && echo "$dotnet_sha512 dotnet.tar.gz" | sha512sum -c - \
     && mkdir -p /usr/share/dotnet \
     && tar -zxf dotnet.tar.gz -C /usr/share/dotnet \
@@ -38,7 +38,7 @@ RUN curl -SL --output dotnet.tar.gz "https://dotnetcli.blob.core.windows.net/dot
 # Install .NET Core 3.1 SDK
 ENV DOTNET_3_1_SDK_VERSION 3.1.406
 RUN curl -SL --output dotnet.tar.gz "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_3_1_SDK_VERSION/dotnet-sdk-$DOTNET_3_1_SDK_VERSION-linux-arm64.tar.gz" \
-    && dotnet_sha512='e720b7c6497da52ce4a927b1a29df5c180fbf5b4f800185de61a31092c0bfa18a78bb9c2fee744fabc78214c5be6e9277f3dc14ae1426b55274f9726997fc733' \
+    && dotnet_sha512='e460ac35329e572dbf4005254129b9799c897f19261d01ea77a0aa196b9e0fecf804996b1157cea92731e30e08b5827ccb0c2d280ea9ab2b04b46492ed5e12a3' \
     && echo "$dotnet_sha512 dotnet.tar.gz" | sha512sum -c - \
     && tar -zxf dotnet.tar.gz -C /usr/share/dotnet \
     && rm dotnet.tar.gz
@@ -46,7 +46,7 @@ RUN curl -SL --output dotnet.tar.gz "https://dotnetcli.blob.core.windows.net/dot
 # Install .NET 5 SDK
 ENV DOTNET_5_SDK_VERSION 5.0.103
 RUN curl -SL --output dotnet.tar.gz "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_5_SDK_VERSION/dotnet-sdk-$DOTNET_5_SDK_VERSION-linux-arm64.tar.gz" \
-    && dotnet_sha512='031272b86f435f88963b560c14342635d892345ac9a35d59ecaf6e425de8aab15ca5c3d0685c79027364e7a323927ba90568fe7ed8610f52ee5f961aef9fcf72' \
+    && dotnet_sha512='179bcc4d280011a0d23f8f0d78349a372fe495e9c5aff106882c08025367ce49afe897f65c033c3f046bae2b1e49f7f6526edce273ab21e77812bbb8317d08a8' \
     && echo "$dotnet_sha512 dotnet.tar.gz" | sha512sum -c - \
     && tar -zxf dotnet.tar.gz -C /usr/share/dotnet \
     && rm dotnet.tar.gz \
