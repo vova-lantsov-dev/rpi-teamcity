@@ -27,7 +27,7 @@ ENV ASPNETCORE_URLS=http://+:80 \
     DOTNET_RUNNING_IN_CONTAINER=true
 
 # Install .NET Core 2.1 SDK
-ENV DOTNET_2_1_SDK_VERSION 2.1.812
+ENV DOTNET_2_1_SDK_VERSION 2.1.813
 RUN curl -SL --output dotnet.tar.gz "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_2_1_SDK_VERSION/dotnet-sdk-$DOTNET_2_1_SDK_VERSION-linux-arm64.tar.gz" \
     && dotnet_sha512='e11d5d407008087d90e21ad593fcfc7b2edf7e92221bffeb44597725b88724fd301ff351a52dfeede49b229cd871b719f60d0d0f72c27f1ed895fc4a0fae051b' \
     && echo "$dotnet_sha512 dotnet.tar.gz" | sha512sum -c - \
@@ -36,7 +36,7 @@ RUN curl -SL --output dotnet.tar.gz "https://dotnetcli.blob.core.windows.net/dot
     && rm dotnet.tar.gz
 
 # Install .NET Core 3.1 SDK
-ENV DOTNET_3_1_SDK_VERSION 3.1.405
+ENV DOTNET_3_1_SDK_VERSION 3.1.406
 RUN curl -SL --output dotnet.tar.gz "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_3_1_SDK_VERSION/dotnet-sdk-$DOTNET_3_1_SDK_VERSION-linux-arm64.tar.gz" \
     && dotnet_sha512='e720b7c6497da52ce4a927b1a29df5c180fbf5b4f800185de61a31092c0bfa18a78bb9c2fee744fabc78214c5be6e9277f3dc14ae1426b55274f9726997fc733' \
     && echo "$dotnet_sha512 dotnet.tar.gz" | sha512sum -c - \
@@ -44,7 +44,7 @@ RUN curl -SL --output dotnet.tar.gz "https://dotnetcli.blob.core.windows.net/dot
     && rm dotnet.tar.gz
 
 # Install .NET 5 SDK
-ENV DOTNET_5_SDK_VERSION 5.0.102
+ENV DOTNET_5_SDK_VERSION 5.0.103
 RUN curl -SL --output dotnet.tar.gz "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_5_SDK_VERSION/dotnet-sdk-$DOTNET_5_SDK_VERSION-linux-arm64.tar.gz" \
     && dotnet_sha512='031272b86f435f88963b560c14342635d892345ac9a35d59ecaf6e425de8aab15ca5c3d0685c79027364e7a323927ba90568fe7ed8610f52ee5f961aef9fcf72' \
     && echo "$dotnet_sha512 dotnet.tar.gz" | sha512sum -c - \
