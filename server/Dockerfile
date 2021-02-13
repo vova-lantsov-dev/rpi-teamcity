@@ -3,7 +3,7 @@ LABEL maintainer="Vova Lantsov"
 LABEL contact_email="contact@vova-lantsov.dev"
 LABEL telegram="https://t.me/vova_lantsov"
 
-RUN curl -SL --output TeamCity.tar.gz https://download.jetbrains.com/teamcity/TeamCity-2020.2.1.tar.gz && \
+RUN curl -SL --output TeamCity.tar.gz https://download.jetbrains.com/teamcity/TeamCity-2020.2.2.tar.gz && \
     tar -xzf TeamCity.tar.gz && \
     rm TeamCity.tar.gz
 

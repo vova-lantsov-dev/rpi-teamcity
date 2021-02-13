@@ -1,5 +1,5 @@
 ### Before You Start
-This project will help you to run TeamCity 2020.2.1 on your Raspberry Pi 4 Model B.
+This project will help you to run TeamCity 2020.2.2 on your Raspberry Pi 4 Model B.
 Might work for older versions of Raspberry Pi as well.
 Tested on Ubuntu 20.04.1 LTS.
 
